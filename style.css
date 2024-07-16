@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+span, a, label {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.form {
+    max-width: 700px;
+    margin: 60px auto;
+}
+.box {
+    border: 3px solid dodgerblue;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.title {
+    text-align: right;
+    font-size: 24px;
+    padding: 3px 10px;
+}
+.inp {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    scale: 0;
+}
+.inp:checked ~ .myinp {
+    border-color: green;
+}
+.inp:checked ~ .myinp::before {
+    scale: 1;
+}
+.myinp {
+    width: 33px;
+    height: 33px;
+    border: 2px solid red;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.myinp::before {
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 17px;
+    background-color: blue;
+    border-radius: 50%;
+    scale: 0;
+    transition: 0.2s all linear;
+}
+.scate {
+    width: 33px;
+    height: 33px;
+    border: 2px solid black;
+    color: blue;
+    font-size: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkicon {
+    rotate: -20deg;
+    scale: 0;
+    transition: 0.2s all linear;
+}
+.inp:checked ~ .scate{
+    border-color: green;
+}
+.inp:checked ~ . scate > .checkicon {
+    rotate: 0deg;
+    scale: 1;
+}
+.label {
+    font-size: 22px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.n1 {
+    margin-left: 7px;
+}
+.filings {
+    margin-bottom: 15px;
+}
+.button {
+    border: 2px solid black;
+    padding: 7px 25px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
